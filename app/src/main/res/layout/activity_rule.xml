@@ -69,7 +69,7 @@
         android:layout_height="wrap_content"
         android:text="占い師：選択した人の役職を見ることができます8"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textSize="17"
+        android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
