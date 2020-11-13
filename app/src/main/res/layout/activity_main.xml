@@ -12,15 +12,14 @@
         android:layout_width="305dp"
         android:layout_height="84dp"
         android:singleLine="false"
-        android:text="JINROU"
+        android:text=" ONE NIGHT TOWN"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintVertical_bias="0.244" />
 
     <Button
         android:id="@+id/button_sn"
@@ -42,5 +41,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_sn"
         app:layout_constraintVertical_bias="0.533" />
+
+    <ImageView
+        android:id="@+id/mainview"
+        android:layout_width="322dp"
+        android:layout_height="210dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.435"
+        app:srcCompat="@drawable/main" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
