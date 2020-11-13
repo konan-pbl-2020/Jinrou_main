@@ -13,7 +13,7 @@ import java.util.Collections;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Ninzyu extends AppCompatActivity {
-    int num = 0;
+    public static int num = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +26,6 @@ public class Ninzyu extends AppCompatActivity {
             public void onClick(View v) {
                 onButtonClick();
                 Intent intentna = new Intent(Ninzyu.this, YourTurn.class);
-                intentna.putExtra("Data_num",num);
                 startActivity(intentna);
             }
         });
