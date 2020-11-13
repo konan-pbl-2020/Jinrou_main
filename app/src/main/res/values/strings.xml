@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Jinrou_pr</string>
+    <string name="app_name">TestCountDownTimer</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
 </resources>
