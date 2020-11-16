@@ -1,0 +1,38 @@
+package com.example.jinrou_pr;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class Kekka extends AppCompatActivity {
+    Yakuwari yaku_kettei[] = YourTurn.yaku_main;
+    int sisya = Touhyou.max_i;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_kekka);
+
+        TextView text_ban = (TextView)findViewById(R.id.TextView_km);
+        int k = yaku_kettei[sisya].yaku;
+
+        if(k == 1){
+            text_ban.setText("村人の勝利です");
+        }else{
+            text_ban.setText("人狼の勝利です");
+        }
+        Button button = (Button)findViewById(R.id.Button_back);
+        button.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intentrs = new Intent(Kekka.this,MainActivity.class);
+                startActivity(intentrs);
+            }
+        });
+    }
+}
