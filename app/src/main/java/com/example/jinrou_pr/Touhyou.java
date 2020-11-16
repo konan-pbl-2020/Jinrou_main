@@ -16,6 +16,9 @@ public class Touhyou extends AppCompatActivity {
     public static int[] num_touhyou = new int[100];
     public static int nyuryoku = 0;
     public static int max_i;
+    int i;
+    int n = Ninzyu.num;
+    int max;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,32 +30,32 @@ public class Touhyou extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 EditText editText = (EditText)findViewById(R.id.nyuryokut);
-                String inputStr = editText.getText().toString();
+                String inputStrT = editText.getText().toString();
                 TextView textView1 = (TextView)findViewById(R.id.textViewt);
-                textView1.setText(inputStr);
-
-
+                textView1.setText(inputStrT);
+                nyuryoku = Integer.parseInt("inputStrT");
+                i++;
             }
         });
-        int n = Ninzyu.num;
-        int[] num_touhyou = new int[n];
-        int i;
-        int nyuryoku = 0;
-        int max;
 
-        for (i = 1; i <= n; i++) {
+        int[] num_touhyou = new int[n];
+        for (i = 0; i < n; ) {
             TextView text_ban = (TextView) findViewById(R.id.textViewt);
             text_ban.setText(i + "番目の方ですね？");
 
             num_touhyou[nyuryoku]++;
         }
-        max = num_touhyou[1];
-        max_i = 1;
-        for(i = 1; i <= n; i++){
-            if(max < num_touhyou[i+1]){
-                max = num_touhyou[i+1];
-                max_i = i+1;
+        max = num_touhyou[0];
+        max_i = 0;
+        for(i = 0; i < n; i++){
+            if(max < num_touhyou[i]){
+                max = num_touhyou[i];
+                max_i = i;
             }
+        }
+        if(i == Ninzyu.num){
+            Intent intentT = new Intent(Touhyou.this, Kekka.class);
+            startActivity(intentT);
         }
     }
 
