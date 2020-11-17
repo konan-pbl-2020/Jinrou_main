@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CountSecond"></activity>
+        <activity android:name=".Setumei"></activity>
+        <activity android:name=".Kakunin" />
+        <activity android:name=".CountSecond" />
         <activity android:name=".Touhyou" />
         <activity android:name=".YourTurn" />
         <activity android:name=".Rule" />

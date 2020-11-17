@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class Kekka extends AppCompatActivity {
-    Yakuwari yaku_kettei[] = YourTurn.yaku_main;
+    Yakuwari yaku_kettei[] = Kakunin.yaku_main;
     int sisya = Touhyou.max_i;
 
     @Override
