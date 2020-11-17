@@ -16,10 +16,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.073" />
+        app:layout_constraintVertical_bias="0.068" />
 
     <Button
-        android:id="@+id/button_y"
+        android:id="@+id/button_h"
         android:layout_width="130dp"
         android:layout_height="79dp"
         android:text="はい"
@@ -29,27 +29,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-    <EditText
-        android:id="@+id/editTextNumber_y"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/button_y"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-    <Button
-        android:id="@+id/button_next"
-        android:layout_width="152dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="8dp"
-        android:text="次へ"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_y" />
 </androidx.constraintlayout.widget.ConstraintLayout>

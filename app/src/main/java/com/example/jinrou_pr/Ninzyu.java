@@ -25,8 +25,8 @@ public class Ninzyu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 onButtonClick();
-                Intent intentna = new Intent(Ninzyu.this, YourTurn.class);
-                startActivity(intentna);
+                Intent intentnk = new Intent(Ninzyu.this, Kakunin.class);
+                startActivity(intentnk);
             }
         });
 
