@@ -42,19 +42,25 @@ public class Setumei extends AppCompatActivity {
                         String str = edittext.getText().toString();
                         int k = Integer.parseInt(str);
 
-                        text_se.getEditableText().clear();
+
 
                         int y = yaku_setu[k].yaku;
 
                         if (y == 0) {
-                            text_se.setText(k + "番目の人は村人です。");
+                            text_se.setText(k+ "番目の人は村人です。");
                         } else if (y == 1) {
-                            text_se.setText(k + "番目の人は人狼です。");
+                            text_se.setText(k+ "番目の人は人狼です。");
                         } else if (y == 2) {
                             text_se.setText(k + "番目の人は占い師です。");
+                        }else {
+                            text_se.setText(k+"番目の人は存在しません。");
                         }
 
                         buttonnext.setEnabled(true);
+                        break;
+                    default:
+                        text_se.setText("エラー");
+                        break;
                 }
             }
         });
