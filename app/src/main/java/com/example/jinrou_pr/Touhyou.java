@@ -10,55 +10,80 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import java.text.BreakIterator;
+import java.util.Arrays;
 
 public class Touhyou extends AppCompatActivity {
-    int[] num_nyu = new int[0];
-    public static int[] num_touhyou = new int[100];
-    public static int nyuryoku = 0;
-    public static int max_i;
-    int i;
-    int n = Ninzyu.num;
-    int max;
+    public static int max_id;
+//    int[] num_nyu = new int[0];
+    public int[] num_touhyou;
+    public int[] tou_num;
+    public int nyuryoku = 0;
+    private int it;
+    private int n = Ninzyu.num;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_touhyou);
 
+        TextView text_ban = (TextView) findViewById(R.id.textViewt);
+        num_touhyou = new int[n];
+        tou_num = new int[n];
+        Arrays.fill(tou_num, 0);
+        Arrays.fill(num_touhyou, 0);
         Button kettei = (Button) findViewById(R.id.buttont);
+
+        it = 0;
+        touhyou(it);
+
         kettei.setOnClickListener(new View.OnClickListener() {
+            TextView text_ban = (TextView) findViewById(R.id.textViewt);
+            EditText editText = (EditText) findViewById(R.id.nyuryokut);
+            int ne = n - 1;
             @Override
             public void onClick(View v) {
-                EditText editText = (EditText)findViewById(R.id.nyuryokut);
-                String inputStrT = editText.getText().toString();
-                TextView textView1 = (TextView)findViewById(R.id.textViewt);
-                textView1.setText(inputStrT);
-                nyuryoku = Integer.parseInt("inputStrT");
-                i++;
+                if (it == ne) {
+                    editText.getText().clear();
+                    max_id = max_value(num_touhyou);
+                    text_ban.setText(String.valueOf(max_id));
+                    Intent intentT = new Intent(Touhyou.this, Kekka.class);
+                    startActivity(intentT);
+                }else {
+                    String inputStrT = editText.getText().toString();
+                    int input_id = Integer.parseInt(inputStrT);
+                    num_touhyou[input_id] += 1;
+                    editText.getText().clear();
+
+                    it++;
+                    touhyou(it);
+                }
             }
         });
-
-        int[] num_touhyou = new int[n];
-        for (i = 0; i < n; ) {
-            TextView text_ban = (TextView) findViewById(R.id.textViewt);
-            text_ban.setText(i + "番目の方ですね？");
-
-            num_touhyou[nyuryoku]++;
-        }
-        max = num_touhyou[0];
-        max_i = 0;
-        for(i = 0; i < n; i++){
-            if(max < num_touhyou[i]){
-                max = num_touhyou[i];
-                max_i = i;
-            }
-        }
-        if(i == Ninzyu.num){
-            Intent intentT = new Intent(Touhyou.this, Kekka.class);
-            startActivity(intentT);
-        }
     }
 
+    void touhyou(int to) {
+        TextView text_ban = (TextView) findViewById(R.id.textViewt);
+
+        text_ban.setText(to + "番さんが人狼だと思う人の番号を入力してください");
+        //num_touhyou[nyuryoku]++;
+    }
+
+
+    public int max_value(int[] values){
+        int max_i;
+        int max = 0;
+        max_i = 0;
+
+        for (int im = 0; im < n; im++) {
+            if (values[im] > max) {
+                max = values[im];
+                max_i = im;
+            }
+        }
+
+        return  max_i;
+
+    }
 
 }
 

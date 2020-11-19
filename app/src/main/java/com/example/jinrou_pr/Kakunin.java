@@ -13,7 +13,7 @@ import java.util.Collections;
 
 public class Kakunin extends AppCompatActivity {
     public static Yakuwari yaku_main[];
-    public static int pointa_i = 0;
+    public static int pointa_i;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,12 +65,12 @@ public class Kakunin extends AppCompatActivity {
         Collections.shuffle(list);
 
         for(i = 0;i<num1;i++) {
-            d = list.get(i) % 6;
-            if(d <=2){
+            d = list.get(i) % 3;
+            if(d == 0){
                 d = 0;
-            }else if(d == 3){
+            }else if(d == 1){
                 d = 1;
-            }else  if(d >= 4){
+            }else {
                 d = 2;
             }
             //    sent_d[i] = d;
