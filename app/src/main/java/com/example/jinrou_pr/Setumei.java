@@ -10,8 +10,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class Setumei extends AppCompatActivity {
-    Yakuwari yaku_setu[] = Kakunin.yaku_main;
+    private Yakuwari yaku_setu[] = Kakunin.yaku_main;
     int point;
+    int Se;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,7 @@ public class Setumei extends AppCompatActivity {
         final Button buttonnext = (Button) findViewById((R.id.button_next));
         buttonnext.setEnabled(false);
 
+        /////////
         hyouzi(yaku_setu, point);
         buttonhai.setOnClickListener(new View.OnClickListener() {
             TextView text_se = (TextView) findViewById(R.id.textView_se);
@@ -75,7 +77,7 @@ public class Setumei extends AppCompatActivity {
             public void onClick(View v) {
 
                 if (point == n) {
-                    Intent intentsc = new Intent(Setumei.this, CountSecondActivity.class);
+                    Intent intentsc = new Intent(Setumei.this, Touhyou.class);
                     startActivity(intentsc);
                 } else {
                     Intent intentsy = new Intent(Setumei.this, YourTurn.class);
@@ -94,9 +96,10 @@ public class Setumei extends AppCompatActivity {
         int g = Ninzyu.num;
         int y;
 
-        y = yak_h[n].yaku;
+        ////////////
 
         if (n < g) {
+            y = yak_h[n].yaku;
             switch (y) {
                 //村人
                 case 0:

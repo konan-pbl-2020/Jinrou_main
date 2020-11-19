@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Ninzyu extends AppCompatActivity {
     public static int num = 0;
+    int N;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
