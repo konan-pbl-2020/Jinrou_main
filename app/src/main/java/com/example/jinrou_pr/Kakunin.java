@@ -14,7 +14,7 @@ import java.util.Collections;
 public class Kakunin extends AppCompatActivity {
     public static Yakuwari yaku_main[];
     public static int pointa_i;
-    int KA;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

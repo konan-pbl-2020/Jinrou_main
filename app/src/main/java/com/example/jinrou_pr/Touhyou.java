@@ -16,11 +16,10 @@ public class Touhyou extends AppCompatActivity {
     public static int max_id;
 //    int[] num_nyu = new int[0];
     public int[] num_touhyou;
-    public int[] tou_num;
+
     public int nyuryoku = 0;
     private int it;
     private int n = Ninzyu.num;
-    int T;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +28,6 @@ public class Touhyou extends AppCompatActivity {
 
         TextView text_ban = (TextView) findViewById(R.id.textViewt);
         num_touhyou = new int[n];
-        tou_num = new int[n];
-        Arrays.fill(tou_num, 0);
         Arrays.fill(num_touhyou, 0);
         Button kettei = (Button) findViewById(R.id.buttont);
 
@@ -43,6 +40,11 @@ public class Touhyou extends AppCompatActivity {
             int ne = n - 1;
             @Override
             public void onClick(View v) {
+                String inputStrT = editText.getText().toString();
+                if(inputStrT.matches("")){
+                    editText.getText().clear();
+                    return;
+                }
                 if (it == ne) {
                     editText.getText().clear();
                     max_id = max_value(num_touhyou);
@@ -50,7 +52,7 @@ public class Touhyou extends AppCompatActivity {
                     Intent intentT = new Intent(Touhyou.this, Kekka.class);
                     startActivity(intentT);
                 }else {
-                    String inputStrT = editText.getText().toString();
+                    //String inputStrT = editText.getText().toString();
                     int input_id = Integer.parseInt(inputStrT);
                     num_touhyou[input_id] += 1;
                     editText.getText().clear();

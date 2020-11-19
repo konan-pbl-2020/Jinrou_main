@@ -12,7 +12,6 @@ import android.widget.TextView;
 public class Setumei extends AppCompatActivity {
     private Yakuwari yaku_setu[] = Kakunin.yaku_main;
     int point;
-    int Se;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,19 +31,25 @@ public class Setumei extends AppCompatActivity {
         buttonhai.setOnClickListener(new View.OnClickListener() {
             TextView text_se = (TextView) findViewById(R.id.textView_se);
             EditText edittext = (EditText) findViewById(R.id.editTextNumber_y);
+            int nn = Ninzyu.num;
+
 
             @Override
             public void onClick(View v) {
+                String str = edittext.getText().toString();
+                //int k = Integer.parseInt(str);
+                if(str.matches("")){
+                    edittext.getText().clear();
+                    return;
+                }
                 switch (yaku_setu[point].yaku) {
                     case 0:
                     case 1:
                         buttonnext.setEnabled(true);
                         break;
                     case 2:
-                        String str = edittext.getText().toString();
+                        //String str = edittext.getText().toString();
                         int k = Integer.parseInt(str);
-
-
 
                         int y = yaku_setu[k].yaku;
 
