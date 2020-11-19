@@ -15,6 +15,7 @@ public class YourTurn extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_your_turn);
+        int Y;
 
         Button buttonh = (Button) findViewById((R.id.button_h));
         TextView textViewy = (TextView) findViewById(R.id.textView4);

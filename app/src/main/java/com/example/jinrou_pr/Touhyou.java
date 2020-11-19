@@ -20,6 +20,7 @@ public class Touhyou extends AppCompatActivity {
     public int nyuryoku = 0;
     private int it;
     private int n = Ninzyu.num;
+    int T;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

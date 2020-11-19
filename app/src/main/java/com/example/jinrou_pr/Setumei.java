@@ -12,6 +12,7 @@ import android.widget.TextView;
 public class Setumei extends AppCompatActivity {
     private Yakuwari yaku_setu[] = Kakunin.yaku_main;
     int point;
+    int Se;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

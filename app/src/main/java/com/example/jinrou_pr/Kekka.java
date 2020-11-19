@@ -11,6 +11,7 @@ import android.widget.TextView;
 public class Kekka extends AppCompatActivity {
     Yakuwari yaku_kettei[] = Kakunin.yaku_main;
     int sisya = Touhyou.max_id;
+    int Ke;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
