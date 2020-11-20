@@ -39,7 +39,7 @@
         android:id="@+id/rule2"
         android:layout_width="374dp"
         android:layout_height="86dp"
-        android:text="ワンナイトタウンとは：女の子陣営と人狼陣営に分かれて話し合いをして多数決で処刑する人を決めるゲームです"
+        android:text="ワンナイトタウンとは：村人陣営と人狼陣営に分かれて話し合いをして多数決で処刑する人を決めるゲームです"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -53,7 +53,7 @@
         android:id="@+id/rule3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="女の子陣営は人狼を処刑できたら勝ちです。"
+        android:text="村人陣営は人狼を処刑できたら勝ちです。"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -79,7 +79,7 @@
         android:id="@+id/textView8"
         android:layout_width="363dp"
         android:layout_height="52dp"
-        android:text="人狼：女の子陣営をだまして処刑されなければ勝利となります"
+        android:text="人狼：村人陣営をだまして処刑されなければ勝利となります"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -102,5 +102,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.682" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="403dp"
+        android:layout_height="56dp"
+        android:text="一人目の人は0番目、二人目の人は1番目のように自分の番号ー1番目と表示されます。"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.281"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.763" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
