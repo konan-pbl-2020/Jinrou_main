@@ -5,10 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
-
-import java.util.ArrayList;
-import java.util.Collections;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -36,7 +32,7 @@ public class Ninzyu extends AppCompatActivity {
     }
 
     public  void onButtonClick(){
-        EditText num_text = (EditText)findViewById(R.id.editTextNumber_n);
+        EditText num_text = (EditText)findViewById(R.id.edit3);
 //        TextView editText2 = (TextView)findViewById(R.id.textView5);
 
 
