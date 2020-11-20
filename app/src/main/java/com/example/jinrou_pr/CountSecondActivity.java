@@ -27,7 +27,7 @@ public class CountSecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_count_second);
 
         // 3分= 3x60x1000 = 180000 msec
-        long countNumber = 3000;
+        long countNumber = 60000;
         // インターバル msec
         long interval = 10;
 
