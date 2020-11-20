@@ -82,7 +82,8 @@ public class Setumei extends AppCompatActivity {
             public void onClick(View v) {
 
                 if (point == n) {
-                    Intent intentsc = new Intent(Setumei.this, Touhyou.class);
+                    //Intent intentsc = new Intent(Setumei.this, Touhyou.class);
+                    Intent intentsc = new Intent(Setumei.this, CountSecondActivity.class);
                     startActivity(intentsc);
                 } else {
                     Intent intentsy = new Intent(Setumei.this, YourTurn.class);

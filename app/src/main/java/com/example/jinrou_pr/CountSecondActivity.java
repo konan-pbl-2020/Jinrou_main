@@ -4,6 +4,7 @@ package com.example.jinrou_pr;
 import androidx.appcompat.app.AppCompatActivity;
 //import android.support.v7.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.CountDownTimer;
 import android.os.Bundle;
 import android.view.View;
@@ -15,7 +16,7 @@ import java.util.Locale;
 
 public class CountSecondActivity extends AppCompatActivity {
 
-    private TextView timerText;
+   private TextView timerText;
 
     private SimpleDateFormat dataFormat =
             new SimpleDateFormat("mm:ss.SSS", Locale.US);
@@ -26,7 +27,7 @@ public class CountSecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_count_second);
 
         // 3分= 3x60x1000 = 180000 msec
-        long countNumber = 180000;
+        long countNumber = 3000;
         // インターバル msec
         long interval = 10;
 
@@ -37,7 +38,7 @@ public class CountSecondActivity extends AppCompatActivity {
         timerText.setText(dataFormat.format(0));
 
         // インスタンス生成
-        // CountDownTimer(long millisInFuture, long countDownInterval)
+        //CountDownTimer(long millisInFuture, long countDownInterval)
         final CountDown countDown = new CountDown(countNumber, interval);
 
         startButton.setOnClickListener(new View.OnClickListener() {
@@ -51,9 +52,8 @@ public class CountSecondActivity extends AppCompatActivity {
         stopButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                // 中止
-                countDown.cancel();
-                timerText.setText(dataFormat.format(0));
+                Intent intentcon = new Intent(CountSecondActivity.this, Touhyou.class);
+                startActivity(intentcon);
             }
         });
     }
@@ -84,3 +84,4 @@ public class CountSecondActivity extends AppCompatActivity {
         }
     }
 }
+
