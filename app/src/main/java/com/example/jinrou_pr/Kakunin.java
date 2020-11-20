@@ -66,10 +66,10 @@ public class Kakunin extends AppCompatActivity {
         Collections.shuffle(list);
 
         for(i = 0;i<num1;i++) {
-            d = list.get(i) % 3;
-            if(d == 0){
+            d = list.get(i) % 5;
+            if(d <= 2){
                 d = 0;
-            }else if(d == 1){
+            }else if(d == 3){
                 d = 1;
             }else {
                 d = 2;
