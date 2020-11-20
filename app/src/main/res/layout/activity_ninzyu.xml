@@ -32,7 +32,7 @@
         android:id="@+id/textView2"
         android:layout_width="202dp"
         android:layout_height="104dp"
-        android:text="番号を入力してください"
+        android:text="人数を入力してください"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/button_na"
         app:layout_constraintEnd_toEndOf="parent"
